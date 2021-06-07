@@ -18,16 +18,16 @@ function playRound(playerSelection, computerSelection) {
     let player = playerSelection.toLowerCase();
     let computer = computerSelection.toLowerCase();
 
-    //Player input check
+    //Player input checks rock
     if (player === 'rock' && computer === 'rock') {
         return 'It\'s a tie!'
-    } else if (player === 'paper' && computer === 'rock') {
-        return 'You win! Paper beats Rock!'
-    } else (player === 'paper' && computer === 'paper')
-        return 'It\'s a tie!'
-    }
+    } else if (player === 'rock' && computer === 'paper') {
+        return 'You lose! Paper beats Rock!'
+    } else (player === 'rock' && computer === 'scissor') 
+        return 'You win! Rock beats Scissor!' 
+}
 
-const playerSelection = "Rock";
+const playerSelection = "rock";
 const computerSelection = computerPlay();
 console.log(playRound(playerSelection, computerSelection));
 </script>
