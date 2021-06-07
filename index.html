@@ -21,12 +21,13 @@ function playRound(playerSelection, computerSelection) {
     //Player input check
     if (player === 'rock' && computer === 'rock') {
         return 'It\'s a tie!'
-    } if (player === 'paper' && computer === 'rock') {
+    } else if (player === 'paper' && computer === 'rock') {
         return 'You win! Paper beats Rock!'
-    } 
-}
+    } else (player === 'paper' && computer === 'paper')
+        return 'It\'s a tie!'
+    }
 
-const playerSelection = "paper";
+const playerSelection = "Rock";
 const computerSelection = computerPlay();
 console.log(playRound(playerSelection, computerSelection));
 </script>
