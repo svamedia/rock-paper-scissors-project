@@ -16,9 +16,9 @@ function computerPlay() {
 // Function that plays a single round of Rock, paper, scissors. 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection.toLowerCase() == 'paper' && computerSelection.toLowerCase() == 'rock') {
-        alert('You win! Paper beats Rock');
+        return 'You win! Paper beats Rock';
     } else {
-        alert('You lose! Paper beats Rock');
+        return 'You lose! Paper beats Rock';
     };
 };
 
