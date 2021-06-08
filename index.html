@@ -5,16 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="">
 <script>
+//User Input
+function playerInput(playerSelection) {
+    return prompt('Type rock, paper, or scissors')
+}
 
 
 // A function that will be the computers play, that will  return rock, paper, or scissors
 function computerInput() {
     let random = ['rock', 'paper', 'scissors'];
     return random[Math.floor(Math.random()*3)];
-};
+}
 
 // Function that plays a single round of Rock, paper, scissors. 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection) {
     let player = playerSelection.toLowerCase();
     let computer = computerSelection.toLowerCase();
 
@@ -23,13 +27,30 @@ function playRound(playerSelection, computerSelection) {
         return 'It\'s a tie!'
     } else if (player === 'rock' && computer === 'paper') {
         return 'You lose! Paper beats Rock!'
-    } else (player === 'rock' && computer === 'scissor')
-        return 'You win! Rock beats Scissor!';
-};
+    } else if (player === 'rock' && computer === 'scissor') {
+        return 'You win! Rock beats Scissor!'
+    //Player input check paper
+    } else if (player === 'paper' && computer === 'paper') {
+        return 'It\'s a tie!'
+    } else if (player === 'paper' && computer === 'scissor') {
+        return 'You lose! Scissor cuts Paper!'
+    } else if (player === 'paper' && computer === 'rock') {
+        return 'You win! Paper covers Rock!'
+    //Player input scissor
+    } else if (player === 'scissor' && computer === 'scissor') {
+        return 'It\'s a tie!'
+    } else if (player === 'scissor' && computer === 'rock') {
+        return 'You lose! Rock beats Scissor'
+    } else if (player === 'scissor' && computer === 'paper') {
+        return 'You win! Scissor cuts Paper!'
+    } else {
+        return 'Please type the correct one'
+    }
+}
 
-const playerSelection = "rock";
+const playerSelection = playerInput();
 const computerSelection = computerInput();
-console.log(playRound(playerSelection, computerSelection));
+console.log(playRound(playerSelection));
 </script>
 <body></body>
 </html>
