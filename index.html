@@ -27,21 +27,21 @@ function playRound(playerSelection) {
         return 'It\'s a tie!'
     } else if (player === 'rock' && computer === 'paper') {
         return 'You lose! Paper beats Rock!'
-    } else if (player === 'rock' && computer === 'scissor') {
+    } else if (player === 'rock' && computer === 'scissors') {
         return 'You win! Rock beats Scissor!'
     //Player input check paper
     } else if (player === 'paper' && computer === 'paper') {
         return 'It\'s a tie!'
-    } else if (player === 'paper' && computer === 'scissor') {
+    } else if (player === 'paper' && computer === 'scissors') {
         return 'You lose! Scissor cuts Paper!'
     } else if (player === 'paper' && computer === 'rock') {
         return 'You win! Paper covers Rock!'
     //Player input scissor
-    } else if (player === 'scissor' && computer === 'scissor') {
+    } else if (player === 'scissors' && computer === 'scissor') {
         return 'It\'s a tie!'
-    } else if (player === 'scissor' && computer === 'rock') {
+    } else if (player === 'scissors' && computer === 'rock') {
         return 'You lose! Rock beats Scissor'
-    } else if (player === 'scissor' && computer === 'paper') {
+    } else if (player === 'scissors' && computer === 'paper') {
         return 'You win! Scissor cuts Paper!'
     } else {
         return 'Please type the correct one'
