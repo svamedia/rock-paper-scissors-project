@@ -18,7 +18,7 @@ function computerInput() {
 }
 
 // Function that plays a single round of Rock, paper, scissors. 
-function playRound(playerSelection) {
+function playRound() {
     let player = playerSelection.toLowerCase();
     let computer = computerSelection.toLowerCase();
 
@@ -51,7 +51,7 @@ function playRound(playerSelection) {
 const playerSelection = playerInput();
 const computerSelection = computerInput();
 console.log('Computer chose: ' + computerSelection);
-console.log(playRound(playerSelection));
+console.log(playRound());
 </script>
 <body></body>
 </html>
