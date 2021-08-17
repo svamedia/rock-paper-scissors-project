@@ -7,6 +7,7 @@
 <script>
 const userScore = 0;
 const computerScore = 0;
+const SELECTION = [rock, paper, scissors];
 
 //User Input
 function playerInput(playerSelection) {
@@ -16,8 +17,7 @@ function playerInput(playerSelection) {
 
 // A function that will be the computers play, that will  return rock, paper, or scissors
 function computerInput() {
-    let random = ['rock', 'paper', 'scissors'];
-    return random[Math.floor(Math.random()*3)];
+    return selection[Math.floor(Math.random()*3)];
 }
 
 // Function that plays a single round of Rock, paper, scissors. 
@@ -50,6 +50,9 @@ function playRound(playerSelection, computerSelection) {
         return 'Please type the correct one'
     }
 }
+
+// converting the if statement to a switch statement
+
 
 // Function that makes the game 5 rounds and keeps score and reports the winner at the end
 for (i = 0; i <= 5; i++) {
