@@ -12,6 +12,7 @@
     <script>
         const userScore = 0;
         const computerScore = 0;
+        const draws = 0;
         const SELECTION = ["rock", "paper", "scissors"];
         
         //User Input
@@ -31,32 +32,29 @@
             let computer = computerSelection.toLowerCase();
         
             //Player input checks rock
-            if (player === 'rock' && computer === 'rock') {
-                return 'It\'s a tie!'
-            } else if (player === 'rock' && computer === 'paper') {
-                return 'You lose! Paper beats Rock!'
-            } else if (player === 'rock' && computer === 'scissors') {
-                return 'You win! Rock beats Scissor!'
-            //Player input check paper
-            } else if (player === 'paper' && computer === 'paper') {
-                return 'It\'s a tie!'
-            } else if (player === 'paper' && computer === 'scissors') {
-                return 'You lose! Scissor cuts Paper!'
-            } else if (player === 'paper' && computer === 'rock') {
-                return 'You win! Paper covers Rock!'
-            //Player input scissor
-            } else if (player === 'scissors' && computer === 'scissor') {
-                return 'It\'s a tie!'
-            } else if (player === 'scissors' && computer === 'rock') {
-                return 'You lose! Rock beats Scissor'
-            } else if (player === 'scissors' && computer === 'paper') {
-                return 'You win! Scissor cuts Paper!'
+
+            // Refractor of the if / else statements
+            if (player === computer) {
+                return draw;
+            } else if (player === "rock" && computer === "scissors") {
+                return playerWinsRound; 
+            } else if (player === "paper" && computer === "rock") {
+                return playerWinsRound; 
+            } else if (player === "scissors" && computer === "paper") {
+                return playerWinsRound;
             } else {
-                return 'Please type the correct one'
+               return computerWinsRound;
             }
         }
         
-        
+        // variables with the winning messages
+        const playerWinsRound = "Player wins this round!"
+        const computerWinsRound = "Computer wins this round!"
+        const draw = "It's a draw! No one wins!"
+        const playerWins = "Player wins the game! Hard fought victory!"
+        const computerWins = "Computer takes the win! Better luck next time!"
+
+
         // Function that makes the game 5 rounds and keeps score and reports the winner at the end
         for (i = 0; i <= 5; i++) {
             const playerSelection = playerInput();
