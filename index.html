@@ -10,9 +10,9 @@
 
 
     <script>
-        const userScore = 0;
-        const computerScore = 0;
-        const draws = 0;
+        let playerScore = 0;
+        let computerScore = 0;
+        let draws = 0;
         const SELECTION = ["rock", "paper", "scissors"];
         
         // A function that will be the computers play, that will  return rock, paper, or scissors
@@ -47,15 +47,32 @@
         const playerWins = "You win the game! Hard fought victory!"
         const computerWins = "Computer takes the win! Better luck next time!"
 
+         // Score keeping function and logs winning messages based on score
+         function gameScore(result) {
+            if (result === playerWinsRound) {
+                playerScore++;
+            } else if (result === draw) {
+                draws++;
+            } else {
+                computerScore++;
+            }
+            if (playerScore === 5) {
+                console.log(playerWins);
+            }
+            if (computerScore === 5) {
+                console.log(computerWins);
+            }
+         }
 
         // Function that makes the game 5 rounds and keeps score and reports the winner at the end
         for (i = 0; i <= 5; i++) {
             const playerSelection = prompt("Choose! Rock, Paper, or Scissors?").toLowerCase();
             const computerSelection = computerInput();
             const roundResult = playRound(playerSelection, computerSelection);
-            console.log('You: ' + playerSelection + ' | ' + 'Computer: ' + computerSelection);
+            console.log("You: " + playerSelection + " | " + "Computer: " + computerSelection);
             console.log(roundResult);
-
+            gameScore(roundResult);
+            console.log("Score: " + playerScore + " | " + "Computer: " + computerScore);
         }
         
     </script>
