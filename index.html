@@ -64,6 +64,16 @@
             }
          }
 
+         // Play again function
+         function playAgain() {
+             let playAgain = confirm("Play Again?");
+            if (playAgain) {
+                location.reload();
+            } else {
+                window.alert("Game Over");
+            }
+         }
+
         // Function that makes the game 5 rounds and keeps score and reports the winner at the end
         for (i = 0; i <= 1000; i++) {
             const playerSelection = prompt("Choose! Rock, Paper, or Scissors?").toLowerCase();
@@ -75,6 +85,7 @@
             console.log("Score: " + playerScore + " | " + "Computer: " + computerScore);
 
             if (playerScore === 5 || computerScore === 5) {
+                playAgain();
                 break;
             }
         }
