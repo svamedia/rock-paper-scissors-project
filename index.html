@@ -4,64 +4,69 @@
 <title>Rock, Paper, Scissors</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="">
-<script>
-const userScore = 0;
-const computerScore = 0;
-const SELECTION = [rock, paper, scissors];
 
-//User Input
-function playerInput(playerSelection) {
-    return prompt('Type to select rock, paper, or scissors')
-}
+<body>
 
 
-// A function that will be the computers play, that will  return rock, paper, or scissors
-function computerInput() {
-    return selection[Math.floor(Math.random()*3)];
-}
 
-// Function that plays a single round of Rock, paper, scissors. 
-function playRound(playerSelection, computerSelection) {
-    let player = playerSelection.toLowerCase();
-    let computer = computerSelection.toLowerCase();
-
-    //Player input checks rock
-    if (player === 'rock' && computer === 'rock') {
-        return 'It\'s a tie!'
-    } else if (player === 'rock' && computer === 'paper') {
-        return 'You lose! Paper beats Rock!'
-    } else if (player === 'rock' && computer === 'scissors') {
-        return 'You win! Rock beats Scissor!'
-    //Player input check paper
-    } else if (player === 'paper' && computer === 'paper') {
-        return 'It\'s a tie!'
-    } else if (player === 'paper' && computer === 'scissors') {
-        return 'You lose! Scissor cuts Paper!'
-    } else if (player === 'paper' && computer === 'rock') {
-        return 'You win! Paper covers Rock!'
-    //Player input scissor
-    } else if (player === 'scissors' && computer === 'scissor') {
-        return 'It\'s a tie!'
-    } else if (player === 'scissors' && computer === 'rock') {
-        return 'You lose! Rock beats Scissor'
-    } else if (player === 'scissors' && computer === 'paper') {
-        return 'You win! Scissor cuts Paper!'
-    } else {
-        return 'Please type the correct one'
-    }
-}
-
-// converting the if statement to a switch statement
-
-
-// Function that makes the game 5 rounds and keeps score and reports the winner at the end
-for (i = 0; i <= 5; i++) {
-    const playerSelection = playerInput();
-    const computerSelection = computerInput();
-    console.log('User: ' + playerSelection + ' | ' + 'Computer: ' + computerSelection);
-    console.log(playRound(playerSelection, computerSelection));
-}
-
-</script>
-<body></body>
+    <script>
+        const userScore = 0;
+        const computerScore = 0;
+        const SELECTION = [rock, paper, scissors];
+        
+        //User Input
+        function playerInput(playerSelection) {
+            return prompt('Type to select rock, paper, or scissors')
+        }
+        
+        
+        // A function that will be the computers play, that will  return rock, paper, or scissors
+        function computerInput() {
+            return selection[Math.floor(Math.random()*3)];
+        }
+        
+        // Function that plays a single round of Rock, paper, scissors. 
+        function playRound(playerSelection, computerSelection) {
+            let player = playerSelection.toLowerCase();
+            let computer = computerSelection.toLowerCase();
+        
+            //Player input checks rock
+            if (player === 'rock' && computer === 'rock') {
+                return 'It\'s a tie!'
+            } else if (player === 'rock' && computer === 'paper') {
+                return 'You lose! Paper beats Rock!'
+            } else if (player === 'rock' && computer === 'scissors') {
+                return 'You win! Rock beats Scissor!'
+            //Player input check paper
+            } else if (player === 'paper' && computer === 'paper') {
+                return 'It\'s a tie!'
+            } else if (player === 'paper' && computer === 'scissors') {
+                return 'You lose! Scissor cuts Paper!'
+            } else if (player === 'paper' && computer === 'rock') {
+                return 'You win! Paper covers Rock!'
+            //Player input scissor
+            } else if (player === 'scissors' && computer === 'scissor') {
+                return 'It\'s a tie!'
+            } else if (player === 'scissors' && computer === 'rock') {
+                return 'You lose! Rock beats Scissor'
+            } else if (player === 'scissors' && computer === 'paper') {
+                return 'You win! Scissor cuts Paper!'
+            } else {
+                return 'Please type the correct one'
+            }
+        }
+        
+        // converting the if statement to a switch statement
+        
+        
+        // Function that makes the game 5 rounds and keeps score and reports the winner at the end
+        for (i = 0; i <= 5; i++) {
+            const playerSelection = playerInput();
+            const computerSelection = computerInput();
+            console.log('User: ' + playerSelection + ' | ' + 'Computer: ' + computerSelection);
+            console.log(playRound(playerSelection, computerSelection));
+        }
+        
+        </script>
+</body>
 </html>
