@@ -23,10 +23,9 @@
         // Function that plays a single round of Rock, paper, scissors. 
         function playRound(playerSelection, computerSelection) {
             let player = playerSelection;
-            let computer = computerSelection.toLowerCase();
+            let computer = computerSelection;
         
-            //Player input checks rock
-
+            //Compares Players answer with Computers
             // Refractor of the if / else statements
             if (player === computer) {
                 return draw;
@@ -53,8 +52,10 @@
         for (i = 0; i <= 5; i++) {
             const playerSelection = prompt("Choose! Rock, Paper, or Scissors?").toLowerCase();
             const computerSelection = computerInput();
+            const roundResult = playRound(playerSelection, computerSelection);
             console.log('You: ' + playerSelection + ' | ' + 'Computer: ' + computerSelection);
-            console.log(playRound(playerSelection, computerSelection));
+            console.log(roundResult);
+
         }
         
     </script>
