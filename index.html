@@ -14,6 +14,12 @@
         let computerScore = 0;
         let draws = 0;
         const SELECTION = ["rock", "paper", "scissors"];
+        // variables with the winning messages
+        const playerWinsRound = "You win this round!"
+        const computerWinsRound = "Computer wins this round!"
+        const draw = "It's a draw! No one wins!"
+        const playerWins = "You win the game! Hard fought victory!"
+        const computerWins = "Computer takes the win! Better luck next time!"
         
         // A function that will be the computers play, that will  return rock, paper, or scissors
         function computerInput() {
@@ -39,13 +45,6 @@
                return computerWinsRound;
             }
         }
-        
-        // variables with the winning messages
-        const playerWinsRound = "You win this round!"
-        const computerWinsRound = "Computer wins this round!"
-        const draw = "It's a draw! No one wins!"
-        const playerWins = "You win the game! Hard fought victory!"
-        const computerWins = "Computer takes the win! Better luck next time!"
 
          // Score keeping function and logs winning messages based on score
          function gameScore(result) {
