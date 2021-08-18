@@ -15,12 +15,6 @@
         const draws = 0;
         const SELECTION = ["rock", "paper", "scissors"];
         
-        //User Input
-        function playerInput(playerSelection) {
-            return prompt('Type to select rock, paper, or scissors')
-        }
-        
-        
         // A function that will be the computers play, that will  return rock, paper, or scissors
         function computerInput() {
             return SELECTION[Math.floor(Math.random()*3)];
@@ -28,7 +22,7 @@
         
         // Function that plays a single round of Rock, paper, scissors. 
         function playRound(playerSelection, computerSelection) {
-            let player = playerSelection.toLowerCase();
+            let player = playerSelection;
             let computer = computerSelection.toLowerCase();
         
             //Player input checks rock
@@ -57,7 +51,7 @@
 
         // Function that makes the game 5 rounds and keeps score and reports the winner at the end
         for (i = 0; i <= 5; i++) {
-            const playerSelection = playerInput();
+            const playerSelection = prompt("Choose! Rock, Paper, or Scissors?").toLowerCase();
             const computerSelection = computerInput();
             console.log('You: ' + playerSelection + ' | ' + 'Computer: ' + computerSelection);
             console.log(playRound(playerSelection, computerSelection));
