@@ -48,10 +48,10 @@
         }
         
         // variables with the winning messages
-        const playerWinsRound = "Player wins this round!"
+        const playerWinsRound = "You win this round!"
         const computerWinsRound = "Computer wins this round!"
         const draw = "It's a draw! No one wins!"
-        const playerWins = "Player wins the game! Hard fought victory!"
+        const playerWins = "You win the game! Hard fought victory!"
         const computerWins = "Computer takes the win! Better luck next time!"
 
 
@@ -59,7 +59,7 @@
         for (i = 0; i <= 5; i++) {
             const playerSelection = playerInput();
             const computerSelection = computerInput();
-            console.log('User: ' + playerSelection + ' | ' + 'Computer: ' + computerSelection);
+            console.log('You: ' + playerSelection + ' | ' + 'Computer: ' + computerSelection);
             console.log(playRound(playerSelection, computerSelection));
         }
         
