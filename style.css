@@ -4,6 +4,6 @@
     margin: 0;
 }
 
-h1 {
-    color: red;
+body {
+    background-image: url(/rps-images/shiny-overlay.svg);
 }
