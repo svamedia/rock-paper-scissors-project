@@ -62,17 +62,17 @@ function playAgain() {
 }
 
 // Function that makes the game 5 rounds and keeps score and reports the winner at the end
-for (i = 0; i <= 1000; i++) {
-    const playerSelection = prompt("Choose! Rock, Paper, or Scissors?").toLowerCase();
-    const computerSelection = computerInput();
-    const roundResult = playRound(playerSelection, computerSelection);
-    console.log("You: " + playerSelection + " | " + "Computer: " + computerSelection);
-    console.log(roundResult);
-    gameScore(roundResult);
-    console.log("Score: " + playerScore + " | " + "Computer: " + computerScore);
+// for (i = 0; i <= 1000; i++) {
+//     const playerSelection = prompt("Choose! Rock, Paper, or Scissors?").toLowerCase();
+//     const computerSelection = computerInput();
+//     const roundResult = playRound(playerSelection, computerSelection);
+//     console.log("You: " + playerSelection + " | " + "Computer: " + computerSelection);
+//     console.log(roundResult);
+//     gameScore(roundResult);
+//     console.log("Score: " + playerScore + " | " + "Computer: " + computerScore);
 
-    if (playerScore === 5 || computerScore === 5) {
-        playAgain();
-        break;
-    }
-}
+//     if (playerScore === 5 || computerScore === 5) {
+//         playAgain();
+//         break;
+//     }
+// }
