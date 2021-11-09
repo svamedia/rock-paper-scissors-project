@@ -15,4 +15,5 @@ body {
 
 .game-contain {
   height: 100vh;
+  margin: 2.5em 4.0625em auto;
 }
