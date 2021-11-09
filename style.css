@@ -1,15 +1,14 @@
 /* Universal syles */
-* {
+html {
   color: #ffff;
   font-family: "Mouse Memoirs", sans-serif;
+  font-size: 100%;
   padding: 0;
   margin: 0;
 }
 
 body {
   background-image: url(/rps-images/shiny-overlay.png);
-}
-
-.game-contain {
-  padding: 5.3125em 4.0625em 5.78125em;
+  background-repeat: no-repeat;
+  font-size: 1em;
 }
