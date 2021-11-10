@@ -61,3 +61,12 @@ body {
   transform: scalex(-1);
   width: 108px;
 }
+
+.top-controls {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bottom-controls {
+  margin-top: 4%;
+}
