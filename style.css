@@ -36,3 +36,16 @@ body {
 .main-content {
   display: grid;
 }
+
+.scorecard {
+  font-size: 18px;
+}
+
+.score-numbers {
+  font-size: 32px;
+}
+
+.sub-header,
+.game-message {
+  font-size: 21px;
+}
