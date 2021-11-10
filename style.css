@@ -49,3 +49,15 @@ body {
 .game-message {
   font-size: 21px;
 }
+
+#paper-btn,
+#rock-btn {
+  height: 83.8px;
+  width: 87.09px;
+}
+
+#scissor-btn {
+  height: 77.47px;
+  transform: scalex(-1);
+  width: 108px;
+}
