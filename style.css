@@ -51,10 +51,14 @@ body {
   font-size: 21px;
 }
 
-.paper-btn,
 .rock-btn {
   height: 83.8px;
   width: 87.09px;
+}
+
+.paper-btn {
+  height: 88.8px;
+  width: 93.09px;
 }
 
 .scissor-btn {
