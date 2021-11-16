@@ -18,9 +18,10 @@
         <p class="sub-header">Who shall claim victory?</p>
       </div>
       <div class="main-content">
-        <div class="scorecard">
+        <div class="scorecard game-message">
           <p class="players">You vs. CPU</p>
-          <span class="score-numbers">0 - 0</span>
+          <span class="player-score score-numbers">0</span> -
+          <span class="computer-score score-numbers">0</span>
           <p class="score-title">First to 5</p>
         </div>
         <div class="game-message">
@@ -31,14 +32,16 @@
         <div class="top-controls">
           <input
             type="image"
-            id="paper-btn"
+            class="paper-btn"
+            id="p"
             src="rps-images/paper-icon.png"
             alt="paper"
             value="paper"
           />
           <input
             type="image"
-            id="rock-btn"
+            class="rock-btn"
+            id="r"
             src="rps-images/rock-icon.png"
             alt="rock"
             value="rock"
@@ -47,7 +50,8 @@
         <div class="bottom-controls">
           <input
             type="image"
-            id="scissor-btn"
+            class="scissor-btn"
+            id="s"
             src="rps-images/scissor-icon.png"
             alt="scissors"
             value="scissors"
