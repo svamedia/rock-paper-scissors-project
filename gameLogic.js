@@ -8,16 +8,29 @@ const paper_input = document.getElementById("p");
 const rock_input = document.getElementById("r");
 const scissor_input = document.getElementById("s");
 
+function getComputerSelection() {
+  const choices = ["rock", "paper", "scissors"];
+  console.log(Math.random());
+}
+
+getComputerSelection();
+
+function game(playerSelection) {
+  console.log("$$$ " + playerSelection);
+}
+
 function main() {
   rock_input.addEventListener("click", function () {
-    console.log("hey you clicked on rock");
+    game("rock");
   });
 
   paper_input.addEventListener("click", function () {
-    console.log("hey you clicked on paper");
+    game("paper");
   });
 
   scissor_input.addEventListener("click", function () {
-    console.log("hey you clicked on scissors");
+    game("scissor");
   });
 }
+
+main();
