@@ -19,12 +19,12 @@ function win(playerSelection, computerSelection) {
   playerScore_span.innerHTML = playerScore;
   computerScore_span.innerHTML = computerScore;
   gameMessage_p.innerHTML =
+    "You WIN! " +
     playerSelection.charAt(0).toUpperCase() +
     playerSelection.slice(1) +
     " beats " +
     computerSelection.charAt(0).toUpperCase() +
-    computerSelection.slice(1) +
-    ". You WIN!";
+    computerSelection.slice(1);
 }
 
 function lose() {
