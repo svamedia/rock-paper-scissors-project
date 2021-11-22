@@ -15,7 +15,24 @@ function getComputerSelection() {
 }
 
 function game(playerSelection) {
-  console.log("$$$ " + playerSelection);
+  const computerSelection = getComputerSelection();
+  switch (playerSelection + computerSelection) {
+    case "rockscissors":
+    case "paperrock":
+    case "scissorspaper":
+      console.log("USER WINS");
+      break;
+    case "rockpaper":
+    case "paperscissors":
+    case "scissorsrock":
+      console.log("USER LOSES");
+      break;
+    case "rockrock":
+    case "paperpaper":
+    case "scissorsscissors":
+      console.log("TIE GAME");
+      break;
+  }
 }
 
 function main() {
@@ -28,7 +45,7 @@ function main() {
   });
 
   scissor_input.addEventListener("click", function () {
-    game("scissor");
+    game("scissors");
   });
 }
 
