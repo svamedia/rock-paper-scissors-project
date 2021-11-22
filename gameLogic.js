@@ -10,10 +10,9 @@ const scissor_input = document.getElementById("s");
 
 function getComputerSelection() {
   const choices = ["rock", "paper", "scissors"];
-  console.log(Math.random());
+  const randomNumber = Math.floor(Math.random() * 3);
+  return choices[randomNumber];
 }
-
-getComputerSelection();
 
 function game(playerSelection) {
   console.log("$$$ " + playerSelection);
