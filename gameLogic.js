@@ -1,5 +1,5 @@
-const playerScore = 0;
-const computerScore = 0;
+let playerScore = 0;
+let computerScore = 0;
 const playerScore_span = document.getElementsByClassName("player-score");
 const computerScore_span = document.getElementsByClassName("computer-score");
 const scoreBoard_div = document.querySelector(".scorecard");
@@ -14,23 +14,37 @@ function getComputerSelection() {
   return choices[randomNumber];
 }
 
+function win() {
+  playerScore++;
+  console.log("You WIN!");
+  console.log(playerScore);
+}
+
+function lose() {
+  console.log("You LOSE!");
+}
+
+function tie() {
+  console.log("TIE GAME!");
+}
+
 function game(playerSelection) {
   const computerSelection = getComputerSelection();
   switch (playerSelection + computerSelection) {
     case "rockscissors":
     case "paperrock":
     case "scissorspaper":
-      console.log("USER WINS");
+      win();
       break;
     case "rockpaper":
     case "paperscissors":
     case "scissorsrock":
-      console.log("USER LOSES");
+      lose();
       break;
     case "rockrock":
     case "paperpaper":
     case "scissorsscissors":
-      console.log("TIE GAME");
+      tie();
       break;
   }
 }
