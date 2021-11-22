@@ -1,7 +1,7 @@
 let playerScore = 0;
 let computerScore = 0;
-const playerScore_span = document.getElementsByClassName("player-score");
-const computerScore_span = document.getElementsByClassName("computer-score");
+const playerScore_span = document.getElementById("userScore");
+const computerScore_span = document.getElementById("computerScore");
 const scoreBoard_div = document.querySelector(".scorecard");
 const gameMessage_div = document.querySelector(".game-message");
 const paper_input = document.getElementById("p");
@@ -16,8 +16,8 @@ function getComputerSelection() {
 
 function win() {
   playerScore++;
-  console.log("You WIN!");
-  console.log(playerScore);
+  playerScore_span.innerHTML = playerScore;
+  computerScore_span.innerHTML = computerScore;
 }
 
 function lose() {
