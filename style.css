@@ -38,16 +38,13 @@ body {
   display: grid;
 }
 
-.scorecard {
-  font-size: 18px;
-}
-
 .score-numbers {
   font-size: 32px;
 }
 
 .sub-header,
-.game-message {
+.game-message,
+.scorecard {
   font-size: 21px;
 }
 
