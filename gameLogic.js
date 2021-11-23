@@ -22,11 +22,9 @@ function win(playerSelection, computerSelection) {
   playerScore++;
   playerScore_span.innerHTML = playerScore;
   computerScore_span.innerHTML = computerScore;
-  gameMessage_p.innerHTML =
-    "You WIN! " +
-    upperCase(playerSelection) +
-    " beats " +
-    upperCase(computerSelection);
+  gameMessage_p.innerHTML = `You WIN! ${upperCase(
+    playerSelection
+  )} beats ${upperCase(computerSelection)}`;
 }
 
 function lose() {
