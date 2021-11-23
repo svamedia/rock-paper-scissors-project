@@ -27,9 +27,7 @@ function win(playerSelection, computerSelection) {
     playerSelection
   )} beats ${upperCase(computerSelection)}`;
   playerSelection_input.classList.add("winner-glow");
-  setTimeout(() => {
-    playerSelection_input.classList.remove("winner-glow");
-  }, 300);
+  setTimeout(() => playerSelection_input.classList.remove("winner-glow"), 300);
 }
 
 function lose(playerSelection, computerSelection) {
@@ -41,9 +39,7 @@ function lose(playerSelection, computerSelection) {
     computerSelection
   )} beats ${upperCase(playerSelection)}`;
   playerSelection_input.classList.add("loser-glow");
-  setTimeout(() => {
-    playerSelection_input.classList.remove("loser-glow");
-  }, 300);
+  setTimeout(() => playerSelection_input.classList.remove("loser-glow"), 300);
 }
 
 function tie(playerSelection) {
@@ -52,9 +48,7 @@ function tie(playerSelection) {
     playerSelection
   )}`;
   playerSelection_input.classList.add("tiegame-glow");
-  setTimeout(() => {
-    playerSelection_input.classList.remove("tiegame-glow");
-  }, 300);
+  setTimeout(() => playerSelection_input.classList.remove("tiegame-glow"), 300);
 }
 
 function game(playerSelection) {
@@ -79,17 +73,11 @@ function game(playerSelection) {
 }
 
 function main() {
-  rock_input.addEventListener("click", function () {
-    game("rock");
-  });
+  rock_input.addEventListener("click", () => game("rock"));
 
-  paper_input.addEventListener("click", function () {
-    game("paper");
-  });
+  paper_input.addEventListener("click", () => game("paper"));
 
-  scissor_input.addEventListener("click", function () {
-    game("scissors");
-  });
+  scissor_input.addEventListener("click", () => game("scissors"));
 }
 
 main();
