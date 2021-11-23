@@ -27,7 +27,7 @@ function win(playerSelection, computerSelection) {
     playerSelection
   )} beats ${upperCase(computerSelection)}`;
   playerSelection_input.classList.add("winner-glow");
-  setTimeout(function () {
+  setTimeout(() => {
     playerSelection_input.classList.remove("winner-glow");
   }, 300);
 }
@@ -41,7 +41,7 @@ function lose(playerSelection, computerSelection) {
     computerSelection
   )} beats ${upperCase(playerSelection)}`;
   playerSelection_input.classList.add("loser-glow");
-  setTimeout(function () {
+  setTimeout(() => {
     playerSelection_input.classList.remove("loser-glow");
   }, 300);
 }
@@ -52,7 +52,7 @@ function tie(playerSelection) {
     playerSelection
   )}`;
   playerSelection_input.classList.add("tiegame-glow");
-  setTimeout(function () {
+  setTimeout(() => {
     playerSelection_input.classList.remove("tiegame-glow");
   }, 300);
 }
