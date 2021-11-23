@@ -14,17 +14,19 @@ function getComputerSelection() {
   return choices[randomNumber];
 }
 
+function upperCase(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function win(playerSelection, computerSelection) {
   playerScore++;
   playerScore_span.innerHTML = playerScore;
   computerScore_span.innerHTML = computerScore;
   gameMessage_p.innerHTML =
     "You WIN! " +
-    playerSelection.charAt(0).toUpperCase() +
-    playerSelection.slice(1) +
+    upperCase(playerSelection) +
     " beats " +
-    computerSelection.charAt(0).toUpperCase() +
-    computerSelection.slice(1);
+    upperCase(computerSelection);
 }
 
 function lose() {
