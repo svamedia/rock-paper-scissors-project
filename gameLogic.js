@@ -4,9 +4,9 @@ const playerScore_span = document.getElementById("userScore");
 const computerScore_span = document.getElementById("computerScore");
 const scoreBoard_div = document.querySelector(".scorecard");
 const gameMessage_p = document.querySelector(".game-message > p");
-const paper_input = document.getElementById("p");
-const rock_input = document.getElementById("r");
-const scissor_input = document.getElementById("s");
+const paper_input = document.getElementById("paper");
+const rock_input = document.getElementById("rock");
+const scissor_input = document.getElementById("scissors");
 
 function getComputerSelection() {
   const choices = ["rock", "paper", "scissors"];
@@ -25,7 +25,7 @@ function win(playerSelection, computerSelection) {
   gameMessage_p.innerHTML = `You WIN! ${upperCase(
     playerSelection
   )} beats ${upperCase(computerSelection)}`;
-  document.querySelector("input").classList.add("winner-glow");
+  document.getElementById(playerSelection).classList.add("winner-glow");
 }
 
 function lose(playerSelection, computerSelection) {
