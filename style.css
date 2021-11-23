@@ -83,16 +83,16 @@ body {
 }
 
 .winner-glow {
-  border: 2px #4dcc7d solid;
+  border: 2px #09ff00 solid;
   box-shadow: 0 0 10px #31b43a;
 }
 
 .loser-glow {
-  border: 2px #fc121b solid;
+  border: 2px #ff0008 solid;
   box-shadow: 0 0 10px #d01115;
 }
 
 .tiegame-glow {
-  border: 2px #464647 solid;
-  box-shadow: 0 0 10px #25292b;
+  border: 2px #efff12 solid;
+  box-shadow: 0 0 10px #dacb00;
 }
