@@ -36,8 +36,12 @@ function lose(playerSelection, computerSelection) {
   )} beats ${upperCase(playerSelection)}`;
 }
 
-function tie() {
-  console.log("TIE GAME!");
+function tie(playerSelection) {
+  playerScore_span.innerHTML = playerScore;
+  computerScore_span.innerHTML = computerScore;
+  gameMessage_p.innerHTML = `TIE GAME! you both chose ${upperCase(
+    playerSelection
+  )}`;
 }
 
 function game(playerSelection) {
