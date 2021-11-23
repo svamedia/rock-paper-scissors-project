@@ -25,6 +25,7 @@ function win(playerSelection, computerSelection) {
   gameMessage_p.innerHTML = `You WIN! ${upperCase(
     playerSelection
   )} beats ${upperCase(computerSelection)}`;
+  document.querySelector("input").classList.add("winner-glow");
 }
 
 function lose(playerSelection, computerSelection) {
