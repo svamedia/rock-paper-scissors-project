@@ -63,9 +63,7 @@ body {
   width: 100px;
 }
 
-.rock-btn,
-.paper-btn,
-.scissor-btn {
+.btn-border {
   border: 2px white solid;
   border-radius: 25px;
   padding: 10px;
@@ -82,4 +80,19 @@ body {
 
 .player-control {
   padding: 20px;
+}
+
+.winner-glow {
+  border: 2px #4dcc7d solid;
+  box-shadow: 0 0 10px #31b43a;
+}
+
+.loser-glow {
+  border: 2px #fc121b solid;
+  box-shadow: 0 0 10px #d01115;
+}
+
+.tiegame-glow {
+  border: 2px #464647 solid;
+  box-shadow: 0 0 10px #25292b;
 }
