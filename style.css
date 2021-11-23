@@ -49,19 +49,27 @@ body {
 }
 
 .rock-btn {
-  height: 83.8px;
-  width: 87.09px;
+  height: 90px;
+  width: 90px;
 }
 
 .paper-btn {
-  height: 83.8px;
-  width: 93.09px;
+  height: 90px;
+  width: 90px;
 }
 
 .scissor-btn {
-  height: 77.47px;
-  transform: scalex(-1);
-  width: 108px;
+  height: 90px;
+  transform: rotate(270deg);
+  width: 100px;
+}
+
+.rock-btn,
+.paper-btn,
+.scissor-btn {
+  border: 2px white solid;
+  border-radius: 25px;
+  padding: 10px;
 }
 
 .top-controls {
@@ -71,4 +79,8 @@ body {
 
 .bottom-controls {
   margin-top: 4%;
+}
+
+.player-control {
+  padding: 20px;
 }
