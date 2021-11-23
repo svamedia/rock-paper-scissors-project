@@ -33,18 +33,28 @@ function win(playerSelection, computerSelection) {
 }
 
 function lose(playerSelection, computerSelection) {
+  const playerSelection_input = document.getElementById(playerSelection);
   computerScore++;
   playerScore_span.innerHTML = playerScore;
   computerScore_span.innerHTML = computerScore;
   gameMessage_p.innerHTML = `You LOSE! ${upperCase(
     computerSelection
   )} beats ${upperCase(playerSelection)}`;
+  playerSelection_input.classList.add("loser-glow");
+  setTimeout(function () {
+    playerSelection_input.classList.remove("loser-glow");
+  }, 300);
 }
 
 function tie(playerSelection) {
+  const playerSelection_input = document.getElementById(playerSelection);
   gameMessage_p.innerHTML = `TIE GAME! you both chose ${upperCase(
     playerSelection
   )}`;
+  playerSelection_input.classList.add("tiegame-glow");
+  setTimeout(function () {
+    playerSelection_input.classList.remove("tiegame-glow");
+  }, 300);
 }
 
 function game(playerSelection) {
