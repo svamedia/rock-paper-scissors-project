@@ -27,8 +27,13 @@ function win(playerSelection, computerSelection) {
   )} beats ${upperCase(computerSelection)}`;
 }
 
-function lose() {
-  console.log("You LOSE!");
+function lose(playerSelection, computerSelection) {
+  computerScore++;
+  playerScore_span.innerHTML = playerScore;
+  computerScore_span.innerHTML = computerScore;
+  gameMessage_p.innerHTML = `You LOSE! ${upperCase(
+    computerSelection
+  )} beats ${upperCase(playerSelection)}`;
 }
 
 function tie() {
