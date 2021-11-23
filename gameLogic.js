@@ -19,13 +19,17 @@ function upperCase(string) {
 }
 
 function win(playerSelection, computerSelection) {
+  const playerSelection_input = document.getElementById(playerSelection);
   playerScore++;
   playerScore_span.innerHTML = playerScore;
   computerScore_span.innerHTML = computerScore;
   gameMessage_p.innerHTML = `You WIN! ${upperCase(
     playerSelection
   )} beats ${upperCase(computerSelection)}`;
-  document.getElementById(playerSelection).classList.add("winner-glow");
+  playerSelection_input.classList.add("winner-glow");
+  setTimeout(function () {
+    playerSelection_input.classList.remove("winner-glow");
+  }, 300);
 }
 
 function lose(playerSelection, computerSelection) {
