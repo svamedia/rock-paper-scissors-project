@@ -4,7 +4,7 @@ html {
   color: #ffff;
   font-family: "Mouse Memoirs", sans-serif;
   font-size: 100%;
-  letter-spacing: 0.6;
+  letter-spacing: 1;
 }
 
 body {
@@ -15,16 +15,11 @@ body {
 }
 
 .game-contain {
-  display: grid;
-  grid-template-rows: 1fr 1.5fr 1fr;
-  height: 100vh;
-}
-
-.header-contain {
   align-items: center;
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  height: 100vh;
+  justify-content: space-evenly;
 }
 
 .header-contain > h1,
@@ -32,34 +27,23 @@ body {
   margin: 0;
 }
 
-.main-content {
-  display: grid;
-}
-
 .score-numbers {
   font-size: 32px;
 }
 
-.sub-header,
-.game-message,
-.scorecard {
-  font-size: 21px;
+.game-message {
+  font-size: 18px;
 }
 
-.rock-btn {
-  height: 90px;
-  width: 90px;
-}
-
-.paper-btn {
-  height: 90px;
-  width: 90px;
+.rock-btn,
+.paper-btn,
+.scissor-btn {
+  height: 64px;
+  width: 64px;
 }
 
 .scissor-btn {
-  height: 90px;
   transform: rotate(270deg);
-  width: 100px;
 }
 
 .btn-border {
@@ -68,17 +52,9 @@ body {
   padding: 10px;
 }
 
-.top-controls {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.bottom-controls {
-  margin-top: 4%;
-}
-
 .player-control {
-  padding: 20px;
+  display: flex;
+  gap: 10px;
 }
 
 .winner-glow {
