@@ -22,9 +22,19 @@ body {
   justify-content: space-evenly;
 }
 
-.header-contain > h1,
-.header-contain > p {
+h1,
+p {
   margin: 0;
+}
+
+.player-result-contain {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.score-numbers-contain {
+  padding: 0 25px;
 }
 
 .score-numbers {
@@ -37,7 +47,8 @@ body {
 
 .rock-btn,
 .paper-btn,
-.scissor-btn {
+.scissor-btn,
+.result {
   height: 64px;
   width: 64px;
 }
