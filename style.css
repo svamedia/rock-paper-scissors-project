@@ -8,8 +8,7 @@ html {
 }
 
 body {
-  background-image: url(/rps-images/shiny-overlay.png);
-  background-repeat: no-repeat;
+  background: url(/rps-images/shiny-overlay.png) no-repeat;
   font-size: 1em;
   margin: auto;
   text-align: center;
