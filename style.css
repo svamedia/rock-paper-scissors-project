@@ -48,7 +48,8 @@ p {
 .rock-btn,
 .paper-btn,
 .scissor-btn,
-.result {
+.result,
+.img-contain {
   height: 64px;
   width: 64px;
 }
