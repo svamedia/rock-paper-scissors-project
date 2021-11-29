@@ -8,6 +8,7 @@ const paper_input = document.getElementById("paper");
 const rock_input = document.getElementById("rock");
 const scissor_input = document.getElementById("scissors");
 
+// function turns images from hidded to visible once the player selects a choice
 function showResult() {
   const results = document.querySelectorAll(".result");
   for (let i = 0; i < results.length; i++) {
@@ -15,6 +16,7 @@ function showResult() {
   }
 }
 
+// checks playerSection & cpu's. Then assigns correct image in .result depending on choice
 function displayImgResult(playerSelection, computerSelection) {
   switch (playerSelection) {
     case "rock":
@@ -44,6 +46,7 @@ function displayImgResult(playerSelection, computerSelection) {
   }
 }
 
+// calculates computers choice
 function getComputerSelection() {
   const choices = ["rock", "paper", "scissors"];
   const randomNumber = Math.floor(Math.random() * 3);
@@ -87,6 +90,7 @@ function tie(playerSelection) {
   setTimeout(() => playerSelection_input.classList.remove("tiegame-glow"), 300);
 }
 
+// compares players choice against cpu choice and executes correct function
 function game(playerSelection) {
   const computerSelection = getComputerSelection();
   switch (playerSelection + computerSelection) {
