@@ -8,6 +8,13 @@ const paper_input = document.getElementById("paper");
 const rock_input = document.getElementById("rock");
 const scissor_input = document.getElementById("scissors");
 
+function showResult() {
+  const results = document.querySelectorAll(".result");
+  for (let i = 0; i < results.length; i++) {
+    results[i].style.visibility = "visible";
+  }
+}
+
 function displayImgResult(playerSelection, computerSelection) {
   switch (playerSelection) {
     case "rock":
@@ -100,6 +107,7 @@ function game(playerSelection) {
       break;
   }
   displayImgResult(playerSelection, computerSelection);
+  showResult();
 }
 
 function main() {

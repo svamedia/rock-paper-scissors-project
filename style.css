@@ -54,6 +54,10 @@ p {
   width: 64px;
 }
 
+.result {
+  visibility: hidden;
+}
+
 .scissor-btn {
   transform: rotate(270deg);
 }
