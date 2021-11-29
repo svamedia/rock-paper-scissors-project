@@ -58,10 +58,6 @@ p {
   visibility: hidden;
 }
 
-.scissor-btn {
-  transform: rotate(270deg);
-}
-
 .btn-border {
   border: 2px white solid;
   border-radius: 25px;
