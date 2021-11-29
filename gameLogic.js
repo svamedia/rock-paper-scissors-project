@@ -8,6 +8,35 @@ const paper_input = document.getElementById("paper");
 const rock_input = document.getElementById("rock");
 const scissor_input = document.getElementById("scissors");
 
+function displayImgResult(playerSelection, computerSelection) {
+  switch (playerSelection) {
+    case "rock":
+      document.getElementById("player-result").src =
+        "./rps-images/rock-icon.png";
+      break;
+    case "paper":
+      document.getElementById("player-result").src =
+        "./rps-images/paper-icon.png";
+      break;
+    case "scissors":
+      document.getElementById("player-result").src =
+        "./rps-images/scissor-icon.png";
+      break;
+  }
+  switch (computerSelection) {
+    case "rock":
+      document.getElementById("cpu-result").src = "./rps-images/rock-icon.png";
+      break;
+    case "paper":
+      document.getElementById("cpu-result").src = "./rps-images/paper-icon.png";
+      break;
+    case "scissors":
+      document.getElementById("cpu-result").src =
+        "./rps-images/scissor-icon.png";
+      break;
+  }
+}
+
 function getComputerSelection() {
   const choices = ["rock", "paper", "scissors"];
   const randomNumber = Math.floor(Math.random() * 3);
@@ -70,6 +99,7 @@ function game(playerSelection) {
       tie(playerSelection, computerSelection);
       break;
   }
+  displayImgResult(playerSelection, computerSelection);
 }
 
 function main() {
