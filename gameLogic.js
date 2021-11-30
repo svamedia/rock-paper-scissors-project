@@ -138,19 +138,30 @@ function main() {
 
 function checkScores(playerScore, computerScore) {
   if (playerScore === 5 || computerScore === 5) {
-    console.log("game over");
-    // playAgain();
+    playAgain();
   }
 }
 
-// function playAgain() {
-//   alert("play again?");
-//   resetScores();
-// }
+function playAgain() {
+  if (confirm("play again?") === true) {
+    resetScores();
+  } else {
+    console.log("game over");
+    disableInput();
+  }
+}
 
-// function resetScores() {
-//   playerScore = 0;
-//   computerScore = 0;
-// }
+function resetScores() {
+  playerScore = 0;
+  computerScore = 0;
+  location.reload();
+}
+
+function disableInput() {
+  const player_input = document.querySelectorAll("input");
+  for (let i = 0; i < player_input.length; i++) {
+    player_input[i].disabled = true;
+  }
+}
 
 main();
