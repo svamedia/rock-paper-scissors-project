@@ -67,6 +67,7 @@ function win(playerSelection, computerSelection) {
   )} beats ${upperCase(computerSelection)}`;
   playerSelection_input.classList.add("winner-glow");
   setTimeout(() => playerSelection_input.classList.remove("winner-glow"), 300);
+  checkScores(playerScore, computerScore);
 }
 
 function lose(playerSelection, computerSelection) {
@@ -79,6 +80,7 @@ function lose(playerSelection, computerSelection) {
   )} beats ${upperCase(playerSelection)}`;
   playerSelection_input.classList.add("loser-glow");
   setTimeout(() => playerSelection_input.classList.remove("loser-glow"), 300);
+  checkScores(playerScore, computerScore);
 }
 
 function tie(playerSelection) {
@@ -115,11 +117,40 @@ function game(playerSelection) {
 }
 
 function main() {
-  rock_input.addEventListener("click", () => game("rock"));
+  // rock_input.addEventListener("click", () => game("rock"));
 
-  paper_input.addEventListener("click", () => game("paper"));
+  // paper_input.addEventListener("click", () => game("paper"));
 
-  scissor_input.addEventListener("click", () => game("scissors"));
+  // scissor_input.addEventListener("click", () => game("scissors"));
+
+  rock_input.onclick = function () {
+    game("rock");
+  };
+
+  paper_input.onclick = function () {
+    game("paper");
+  };
+
+  scissor_input.onclick = function () {
+    game("scissors");
+  };
 }
+
+function checkScores(playerScore, computerScore) {
+  if (playerScore === 5 || computerScore === 5) {
+    console.log("game over");
+    // playAgain();
+  }
+}
+
+// function playAgain() {
+//   alert("play again?");
+//   resetScores();
+// }
+
+// function resetScores() {
+//   playerScore = 0;
+//   computerScore = 0;
+// }
 
 main();
