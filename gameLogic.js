@@ -3,6 +3,7 @@ let computerScore = 0;
 const playerScore_span = document.getElementById("userScore");
 const computerScore_span = document.getElementById("computerScore");
 const scoreBoard_div = document.querySelector(".scorecard");
+const gameMessage_div = document.querySelector(".game-message");
 const gameMessage_p = document.querySelector(".game-message > p");
 const paper_input = document.getElementById("paper");
 const rock_input = document.getElementById("rock");
@@ -139,19 +140,11 @@ function main() {
 function checkScores(playerScore, computerScore) {
   if (playerScore === 5 || computerScore === 5) {
     playAgain();
-  }
-}
-
-function playAgain() {
-  if (confirm("play again?") === true) {
-    resetScores();
-  } else {
-    console.log("game over");
     disableInput();
   }
 }
 
-function resetScores() {
+function resetGame() {
   playerScore = 0;
   computerScore = 0;
   location.reload();
@@ -162,6 +155,15 @@ function disableInput() {
   for (let i = 0; i < player_input.length; i++) {
     player_input[i].disabled = true;
   }
+}
+
+function playAgain() {
+  let gameMessage_button = document.createElement("button");
+  gameMessage_button.innerHTML = "Play Again?";
+  gameMessage_div.appendChild(gameMessage_button);
+  gameMessage_button.onclick = function () {
+    resetGame();
+  };
 }
 
 main();
