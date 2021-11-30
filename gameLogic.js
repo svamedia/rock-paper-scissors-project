@@ -159,7 +159,8 @@ function disableInput() {
 
 function playAgain() {
   let gameMessage_button = document.createElement("button");
-  gameMessage_button.innerHTML = "Play Again?";
+  gameMessage_button.innerHTML = "Play again?";
+  gameMessage_button.classList.add("play-again");
   gameMessage_div.appendChild(gameMessage_button);
   gameMessage_button.onclick = function () {
     resetGame();
