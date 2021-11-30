@@ -32,7 +32,7 @@ p {
 }
 
 .score-numbers-contain {
-  padding: 0 25px;
+  margin: 0 40px;
 }
 
 .score-numbers {
@@ -48,8 +48,8 @@ p {
 .scissor-btn,
 .result,
 .img-contain {
-  height: 64px;
-  width: 64px;
+  height: 70px;
+  width: 65px;
 }
 
 .result {
