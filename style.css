@@ -42,8 +42,8 @@ p {
 .scissor-btn,
 .result,
 .img-contain {
-  height: 70px;
-  width: 65px;
+  height: 65px;
+  width: 60px;
 }
 
 .result {
@@ -81,6 +81,7 @@ p {
   border: 1px solid rgb(255, 174, 25);
   border-radius: 8px;
   font-family: "Mouse Memoirs", sans-serif;
+  font-size: 18px;
   margin-top: 10px;
   padding: 8px 24px;
 }
@@ -90,13 +91,27 @@ p {
 /* iphone 6/7/8 */
 @media only screen and (min-width: 375px) {
   body {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+  }
+  .rock-btn,
+  .paper-btn,
+  .scissor-btn,
+  .result,
+  .img-contain {
+    height: 75px;
+    width: 70px;
+  }
+  .score-numbers-contain {
+    margin: 0 45px;
+  }
+  .player-control {
+    gap: 25px;
   }
 }
 /* iphone 6/7/8 plus */
 @media only screen and (min-width: 414px) {
-  body {
-    font-size: 1.3rem;
+  .player-control {
+    gap: 30px;
   }
 }
 /* ipad  */
@@ -105,9 +120,27 @@ p {
     font-size: 1.5rem;
   }
 }
-/* ipad pro */
+/* ipad pro and desktop 1024px*/
 @media only screen and (min-width: 1024px) {
   body {
     font-size: 1.7rem;
+  }
+  .game-contain {
+    gap: 125px;
+    justify-content: center;
+  }
+  .score-numbers-contain {
+    margin: 0 75px;
+  }
+  .rock-btn,
+  .paper-btn,
+  .scissor-btn,
+  .result,
+  .img-contain {
+    height: 80px;
+    width: 80px;
+  }
+  .player-control {
+    gap: 60px;
   }
 }
