@@ -3,12 +3,13 @@ html {
   box-sizing: border-box;
   color: #ffff;
   font-family: "Mouse Memoirs", sans-serif;
+  font-size: 16px;
 }
 
 body {
   background-image: url(/rps-images/shiny-overlay.png);
   background-size: cover;
-  font-size: 17px;
+  font-size: 1rem;
   margin: auto;
   text-align: center;
 }
@@ -95,9 +96,27 @@ p {
 
 /* Media queries for larger screens */
 
-/* iphone 6/7/8 plus */
-/* @media only screen and (min-width: 414px) {
+/* iphone 6/7/8 */
+@media only screen and (min-width: 375px) {
   body {
-    
+    font-size: 1.1rem;
   }
-} */
+}
+/* iphone 6/7/8 plus */
+@media only screen and (min-width: 414px) {
+  body {
+    font-size: 1.3rem;
+  }
+}
+/* ipad  */
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+/* ipad pro */
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 1.5rem;
+  }
+}
