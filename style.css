@@ -7,7 +7,7 @@ html {
 
 body {
   background: url(/rps-images/shiny-overlay.png) no-repeat;
-  font-size: 1em;
+  font-size: 17px;
   margin: auto;
   text-align: center;
 }
@@ -80,4 +80,14 @@ p {
 .tiegame-glow {
   border: 2px #efff12 solid;
   box-shadow: 0 0 10px #dacb00;
+}
+
+.play-again {
+  background-color: rgb(255, 166, 0);
+  border: 1px solid rgb(255, 174, 25);
+  border-radius: 8px;
+  font-family: "Mouse Memoirs", sans-serif;
+  font-size: 17px;
+  margin-top: 10px;
+  padding: 8px 24px;
 }
