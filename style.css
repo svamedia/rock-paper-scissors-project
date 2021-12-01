@@ -37,6 +37,10 @@ p {
   margin: 0 40px;
 }
 
+.score-numbers {
+  font-size: 38px;
+}
+
 .rock-btn,
 .paper-btn,
 .scissor-btn,
@@ -119,6 +123,9 @@ p {
   body {
     font-size: 1.5rem;
   }
+  .play-again {
+    font-size: 21px;
+  }
 }
 /* ipad pro and desktop 1024px*/
 @media only screen and (min-width: 1024px) {
@@ -131,6 +138,9 @@ p {
   }
   .score-numbers-contain {
     margin: 0 75px;
+  }
+  .score-numbers {
+    font-size: 48px;
   }
   .rock-btn,
   .paper-btn,
