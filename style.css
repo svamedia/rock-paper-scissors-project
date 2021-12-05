@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background-image: url(/rps-images/shiny-overlay.png);
+  background-image: url(./rps-images/shiny-overlay.png);
   background-size: cover;
   font-size: 1rem;
   margin: auto;
