@@ -5,7 +5,7 @@ html {
   color: #ffff;
   font-family: "Mouse Memoirs", sans-serif;
   font-size: 16px;
-  min-height: -webkit-fill-available;
+  max-height: -webkit-fill-available;
   overflow: hidden;
 }
 
